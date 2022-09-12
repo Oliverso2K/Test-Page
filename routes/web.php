@@ -21,7 +21,7 @@ Route::get('/landingpage', function () {
     return view('landingpage');
 });
 
-Route::get('/contacto/{version_id?}', function ($version_id=0) {
+Route::get('/contact/{version_id?}', function ($version_id=0) {
 $versiones = [
     '1234', '5678'
 ];
@@ -32,5 +32,5 @@ $versiones = [
     }
 
 
-    return view('contacto', compact('versiones', 'version'));
+    return view('contact', compact('versiones', 'version'));
 });

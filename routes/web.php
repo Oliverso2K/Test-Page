@@ -21,16 +21,15 @@ Route::get('/landingpage', function () {
     return view('landingpage');
 });
 
-Route::get('/contact/{version_id?}', function ($version_id=0) {
-$versiones = [
-    '1234', '5678'
-];
-    if(!empty($version_id)) {
-        $version = $versiones[$version_id];
+Route::get('/contact/{code?}', function ($code = null) {
+    if($code == 1234) {
+        $name = "John Doe";
+        $email = "asdf@mail.com";
     }else {
-        $version = 0;
+        $name = '';
+        $email = '';
     }
 
 
-    return view('contact', compact('versiones', 'version'));
+    return view('contact', compact('name', 'email'));
 });

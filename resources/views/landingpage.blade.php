@@ -245,7 +245,7 @@
           <div class="col-lg-6" data-aos="fade-up">
             <div class="resume-item">
               <h4>Bachillerato General por Competencias</h4>
-              <h5>201 - 201</h5>
+              <h5>2016 - 2019</h5>
               <p><em>Escuela Preparatoria 11, Universidad de Guadalajara</em></p>
             </div>
             <div class="resume-item">

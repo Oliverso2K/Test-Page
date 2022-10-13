@@ -114,12 +114,12 @@
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Correo</label>
+                  <label for="email">Correo</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Comentario</label>
+                <label for="comment">Comentario</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
               <div class="my-3">

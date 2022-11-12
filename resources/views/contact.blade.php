@@ -107,20 +107,32 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="/recibe-form-contacto" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
+                  @csrf
+
                   <label for="name">Nombre</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                  <input type="text" name="name" class="form-control" id="name" value={{ $name ?? old('name') }}>
+                  @error('name')
+                    <p>Ingrese un nombre.</p>
+                  @enderror
+
                 </div>
                 <div class="form-group col-md-6">
                   <label for="email">Correo</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                  <input type="email" class="form-control" name="email" id="email" value={{ $email ?? old('email') }}>
+                  @error('email')
+                  <p>Ingrese un correo electrónico.</p>
+                  @enderror
                 </div>
               </div>
               <div class="form-group">
                 <label for="comment">Comentario</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea class="form-control" name="message" rows="10" required>{{ $comment ?? old('comment') }}</textarea>
+                @error('comment')
+                  <p>Ingrese un comentario.</p>
+                @enderror
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>

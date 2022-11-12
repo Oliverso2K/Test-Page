@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SitioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,19 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/landingpage', function () {
-    return view('landingpage');
-});
-
-Route::get('/contact/{code?}', function ($code = null) {
-    if($code == 1234) {
-        $name = "John Doe";
-        $email = "asdf@mail.com";
-    }else {
-        $name = '';
-        $email = '';
-    }
-
-
-    return view('contact', compact('name', 'email'));
-});
+Route::get('/landingpage', [SitioController::class,'landingpage']);
+Route::get('/contact/{code?}',[SitioController::class,'contact']);
+Route::post('/recibe-form-contacto',[SitioController::class,'recibeFormContacto']);

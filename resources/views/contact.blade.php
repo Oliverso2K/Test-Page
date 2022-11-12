@@ -107,7 +107,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="/recibe-form-contacto" method="post" role="form" class="php-email-form">
+            <form action="/recibe-form-contacto" method="post" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   @csrf
@@ -123,7 +123,7 @@
                   <label for="email">Correo</label>
                   <input type="email" class="form-control" name="email" id="email" value={{ $email ?? old('email') }}>
                   @error('email')
-                  <p>Ingrese un correo electrónico.</p>
+                    <p>Ingrese un correo electrónico.</p>
                   @enderror
                 </div>
               </div>
